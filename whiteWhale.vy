@@ -9,8 +9,8 @@ pricePaid   :   public(uint256)
 @payable
 def __default__():
 
-    assert self.pricePaid   <   msg.value
-    self.pricePaid          =   msg.value
+    assert self.pricePaid * 2   <   msg.value
+    self.pricePaid              =   msg.value
 
     send( self.owner , self.balance )
 
