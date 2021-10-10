@@ -7,6 +7,7 @@ pricePaid   :   public(uint256)
 
 @external
 @payable
+
 def buyMe():
 
     assert self.pricePaid * 2   <=   msg.value
